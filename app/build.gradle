@@ -29,9 +29,7 @@ android {
         buildConfigField "String", "PLAYSTORE_LICENSE_KEY",  "$props.PLAYSTORE_LICENSE_KEY"
         buildConfigField "String", "MERCHANT_ID",  "$props.MERCHANT_ID"
     }
-    signingConfigs {
-        release
-    }
+
     buildTypes {
         debug {
             minifyEnabled false
@@ -42,7 +40,7 @@ android {
             buildConfigField "String", "GOOGLE_DRIVE_CLIENT_ID",  "$props.GOOGLE_DRIVE_DEBUG_CLIENT_ID"
         }
         release {
-            signingConfig signingConfigs.release
+
             minifyEnabled true
             shrinkResources true
             useProguard true
@@ -121,11 +119,6 @@ dependencies {
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:+'
 }
 
-
-android.signingConfigs.release.storeFile rootProject.file(props.keyStore)
-android.signingConfigs.release.storePassword props.keyStorePassword
-android.signingConfigs.release.keyAlias props.keyAlias
-android.signingConfigs.release.keyPassword props.keyAliasPassword
 
 if (getGradle().getStartParameter().getTaskRequests().toString().contains("Free")) {
     apply plugin: 'com.google.gms.google-services'
