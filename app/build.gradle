@@ -101,10 +101,10 @@ ext {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.jaredrummler:android-processes:+'
-    implementation 'com.github.mjdev:libaums:+'
-    implementation 'org.apache.ftpserver:ftpserver-core:+'
-    implementation 'commons-net:commons-net:+'
+    implementation 'com.jaredrummler:android-processes:1.1.1'
+    implementation 'com.github.mjdev:libaums:0.5.5'
+    implementation 'org.apache.ftpserver:ftpserver-core:1.1.1'
+    implementation 'commons-net:commons-net:3.6'
     implementation 'com.zsoltsafrany:needle:1.0.0'
     implementation 'com.cloudrail:cloudrail-si-android:2.21.6'
     implementation "com.android.support:appcompat-v7:${supportLibVersion}"
@@ -112,11 +112,11 @@ dependencies {
     implementation "com.android.support:design:${supportLibVersion}"
     implementation "com.android.support:exifinterface:${supportLibVersion}"
     implementation "com.github.javiersantos:AppUpdater:2.6.5"
-    freeImplementation 'com.crashlytics.sdk.android:crashlytics:2.9.1'
+    freeImplementation 'com.crashlytics.sdk.android:crashlytics:2.9.4'
     freeImplementation "com.google.firebase:firebase-ads:${gmsVersion}"
     freeImplementation 'com.anjlab.android.iab.v3:library:1.0.44'
 
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:+'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
 }
 
 

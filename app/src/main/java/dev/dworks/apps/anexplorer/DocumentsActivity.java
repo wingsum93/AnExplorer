@@ -396,6 +396,9 @@ public class DocumentsActivity extends BaseActivity {
                 directionality == Character.DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC;
     }
 
+    /**
+     * check whether show lock and screen and protect user data.
+     */
     private void initProtection() {
 
 		if(mAuthenticated || !SettingsActivity.isPinEnabled(this)){
